@@ -1,0 +1,513 @@
+<div class="min-h-screen bg-white">
+  <span id="top" class="sr-only"></span>
+  <header
+    class="sticky top-0 z-50 w-full border-b border-[#e6e4dc] bg-white/80 backdrop-blur-sm"
+  >
+    <div class="container flex h-16 items-center justify-between">
+      <a href="#top" class="flex items-center gap-2">
+        <img
+          src="/tch-logo.png"
+          alt="The Code Haven Logo"
+          width="{40}"
+          height="{40}"
+          class="h-10 w-auto"
+        />
+        <span class="text-xl font-semibold text-[#1a3e5a]">The Code Haven</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6">
+        <a
+          href="#services"
+          class="text-[#1a3e5a] hover:text-[#30a5b8] transition-colors"
+        >
+          Services
+        </a>
+        <a
+          href="#expertise"
+          class="text-[#1a3e5a] hover:text-[#30a5b8] transition-colors"
+        >
+          Expertise
+        </a>
+        <a
+          href="#about"
+          class="text-[#1a3e5a] hover:text-[#30a5b8] transition-colors"
+        >
+          About
+        </a>
+        <!-- <a
+          href="#contact"
+          class="text-[#1a3e5a] hover:text-[#30a5b8] transition-colors"
+        >
+          Contact
+        </a> -->
+      </nav>
+      <app-button
+        (click)="scrollToSection('contact')"
+        >Get in Touch</app-button
+      >
+    </div>
+  </header>
+
+  <main>
+    <section class="py-16 md:py-24">
+      <div class="container">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h1
+              class="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1a3e5a] leading-tight"
+            >
+              Transforming Ideas Into Digital Reality
+            </h1>
+            <p class="mt-6 text-lg text-[#4a5568]">
+              The Code Haven is a premier software consultancy specializing in
+              crafting exceptional web experiences and robust backend solutions.
+            </p>
+            <div class="mt-8 flex flex-col sm:flex-row gap-4">
+              <app-button
+                (click)="scrollToSection('services')"
+                >Our Services</app-button
+              >
+              <app-button
+                variant="outline"
+                (click)="scrollToSection('contact')"
+              >
+                Contact Us
+              </app-button>
+            </div>
+          </div>
+          <div class="flex justify-center">
+            <img
+              src="teamwork-innovation.png"
+              alt="Software Development"
+              width="{300}"
+              height="{300}"
+              class="w-full max-w-md"
+            />
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="py-20 bg-white">
+      <div class="container">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-[#1a3e5a]">
+            Our Services
+          </h2>
+          <p class="mt-4 text-[#4a5568] max-w-2xl mx-auto">
+            We deliver comprehensive solutions tailored to your business needs
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <app-card
+            className="border-[#e6e4dc] hover:shadow-md transition-shadow"
+          >
+            <app-card-content className="pt-6">
+              <div
+                class="rounded-full bg-[#e6f7fa] p-3 w-12 h-12 flex items-center justify-center mb-4"
+              >
+                <lucide-icon
+                  [img]="Laptop"
+                  class="h-6 w-6 text-[#30a5b8]"
+                ></lucide-icon>
+              </div>
+              <h3 class="text-xl font-semibold text-[#1a3e5a] mb-2">
+                Web Development
+              </h3>
+              <p class="text-[#4a5568]">
+                Custom web applications built with modern frameworks like React,
+                Angular, and Vue.js.
+              </p>
+            </app-card-content>
+          </app-card>
+
+          <app-card
+            className="border-[#e6e4dc] hover:shadow-md transition-shadow"
+          >
+            <app-card-content className="pt-6">
+              <div
+                class="rounded-full bg-[#fff4e6] p-3 w-12 h-12 flex items-center justify-center mb-4"
+              >
+                <lucide-icon
+                  [img]="Server"
+                  class="h-6 w-6 text-[#f59e0b]"
+                ></lucide-icon>
+              </div>
+              <h3 class="text-xl font-semibold text-[#1a3e5a] mb-2">
+                Backend Solutions
+              </h3>
+              <p class="text-[#4a5568]">
+                Robust server-side applications using Node.js, Express.js, and
+                Nest.js.
+              </p>
+            </app-card-content>
+          </app-card>
+
+          <app-card
+            className="border-[#e6e4dc] hover:shadow-md transition-shadow"
+          >
+            <app-card-content className="pt-6">
+              <div
+                class="rounded-full bg-[#fae8ef] p-3 w-12 h-12 flex items-center justify-center mb-4"
+              >
+                <lucide-icon
+                  [img]="PenTool"
+                  class="h-6 w-6 text-[#be185d]"
+                ></lucide-icon>
+              </div>
+              <h3 class="text-xl font-semibold text-[#1a3e5a] mb-2">
+                UI/UX Design
+              </h3>
+              <p class="text-[#4a5568]">
+                Intuitive and engaging user interfaces designed with Figma and
+                other professional tools.
+              </p>
+            </app-card-content>
+          </app-card>
+
+          <app-card
+            className="border-[#e6e4dc] hover:shadow-md transition-shadow"
+          >
+            <app-card-content className="pt-6">
+              <div
+                class="rounded-full bg-[#e6f7fa] p-3 w-12 h-12 flex items-center justify-center mb-4"
+              >
+                <lucide-icon
+                  [img]="Code"
+                  class="h-6 w-6 text-[#30a5b8]"
+                ></lucide-icon>
+              </div>
+              <h3 class="text-xl font-semibold text-[#1a3e5a] mb-2">
+                Custom Solutions
+              </h3>
+              <p class="text-[#4a5568]">
+                Tailored software solutions designed to address your specific
+                business challenges.
+              </p>
+            </app-card-content>
+          </app-card>
+
+          <app-card
+            className="border-[#e6e4dc] hover:shadow-md transition-shadow"
+          >
+            <app-card-content className="pt-6">
+              <div
+                class="rounded-full bg-[#fff4e6] p-3 w-12 h-12 flex items-center justify-center mb-4"
+              >
+                <lucide-icon
+                  [img]="Database"
+                  class="h-6 w-6 text-[#f59e0b]"
+                ></lucide-icon>
+              </div>
+              <h3 class="text-xl font-semibold text-[#1a3e5a] mb-2">
+                CMS Implementation
+              </h3>
+              <p class="text-[#4a5568]">
+                Content management solutions using Contentful, Umbraco, and
+                Strapi.
+              </p>
+            </app-card-content>
+          </app-card>
+
+          <app-card
+            className="border-[#e6e4dc] hover:shadow-md transition-shadow"
+          >
+            <app-card-content className="pt-6">
+              <div
+                class="rounded-full bg-[#fae8ef] p-3 w-12 h-12 flex items-center justify-center mb-4"
+              >
+                <lucide-icon
+                  [img]="Layers"
+                  class="h-6 w-6 text-[#be185d]"
+                ></lucide-icon>
+              </div>
+              <h3 class="text-xl font-semibold text-[#1a3e5a] mb-2">
+                Technical Consultation
+              </h3>
+              <p class="text-[#4a5568]">
+                Expert advice on technology stack selection and architecture
+                design.
+              </p>
+            </app-card-content>
+          </app-card>
+        </div>
+      </div>
+    </section>
+
+    <section id="expertise" class="py-20 bg-white">
+      <div class="container">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-[#1a3e5a]">
+            Our Expertise
+          </h2>
+          <p class="mt-4 text-[#4a5568] max-w-2xl mx-auto">
+            We leverage cutting-edge technologies to deliver exceptional results
+          </p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div
+            *ngFor="let tech of expertise"
+            class="flex flex-col items-center p-4 bg-white rounded-lg border border-[#e6e4dc] hover:shadow-md transition-shadow"
+          >
+            <div class="w-12 h-12 flex items-center justify-center mb-3">
+              <img
+                [src]="tech.icon + '?height=48&width=48'"
+                [alt]="tech.name + ' icon'"
+                class="w-12 h-12"
+              />
+            </div>
+            <span class="text-[#1a3e5a] font-medium">{{ tech.name }}</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="py-20 bg-white">
+      <div class="container">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-3xl md:text-4xl font-bold text-[#1a3e5a] mb-6">
+              About The Code Haven
+            </h2>
+            <p class="text-[#4a5568] mb-4">
+              The Code Haven is a software consultancy with over 10 years of
+              experience in delivering high-quality web and software solutions.
+              We specialize in creating exceptional digital experiences that
+              help businesses thrive in the digital landscape.
+            </p>
+            <p class="text-[#4a5568] mb-4">
+              Our team brings extensive expertise in frontend and backend
+              technologies, having worked with clients across various industries
+              including education, finance, healthcare, and e-commerce.
+            </p>
+            <p class="text-[#4a5568]">
+              With a proven track record of leading development teams and
+              managing complex projects, we ensure that every solution we
+              deliver is scalable, maintainable, and aligned with your business
+              objectives.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <app-card className="border-[#e6e4dc] bg-[#e6f7fa]/30">
+              <app-card-content className="pt-6">
+                <h3 class="text-2xl font-bold text-[#30a5b8] mb-2">10+</h3>
+                <p class="text-[#1a3e5a] font-medium">Years Experience</p>
+              </app-card-content>
+            </app-card>
+            <app-card className="border-[#e6e4dc] bg-[#fff4e6]/30">
+              <app-card-content className="pt-6">
+                <h3 class="text-2xl font-bold text-[#f59e0b] mb-2">5+</h3>
+                <p class="text-[#1a3e5a] font-medium">Years Leadership</p>
+              </app-card-content>
+            </app-card>
+            <app-card className="border-[#e6e4dc] bg-[#fae8ef]/30">
+              <app-card-content className="pt-6">
+                <h3 class="text-2xl font-bold text-[#be185d] mb-2">20+</h3>
+                <p class="text-[#1a3e5a] font-medium">Technologies</p>
+              </app-card-content>
+            </app-card>
+            <app-card className="border-[#e6e4dc] bg-[#e6f7fa]/30">
+              <app-card-content className="pt-6">
+                <h3 class="text-2xl font-bold text-[#30a5b8] mb-2">3+</h3>
+                <p class="text-[#1a3e5a] font-medium">Core Domains</p>
+              </app-card-content>
+            </app-card>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section id="contact" class="py-20 bg-white">
+      <div class="container">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-[#1a3e5a]">
+            Get In Touch
+          </h2>
+          <p class="mt-4 text-[#4a5568] max-w-2xl mx-auto">
+            Ready to start your next project? Contact us today for a free
+            consultation.
+          </p>
+        </div>
+
+        <div class="mt-16 max-w-3xl mx-auto">
+          <app-card class="border-[#e6e4dc]">
+            <app-card-content className="pt-6">
+              <form class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div class="space-y-2">
+                    <label
+                      htmlFor="name"
+                      class="text-sm font-medium text-[#1a3e5a]"
+                    >
+                      Name
+                    </label>
+                    <input
+                      id="name"
+                      type="text"
+                      class="w-full px-3 py-2 border border-[#e6e4dc] rounded-md focus:outline-none focus:ring-2 focus:ring-[#30a5b8]"
+                      placeholder="Your name"
+                    />
+                  </div>
+                  <div class="space-y-2">
+                    <label
+                      htmlFor="email"
+                      class="text-sm font-medium text-[#1a3e5a]"
+                    >
+                      Email
+                    </label>
+                    <input
+                      id="email"
+                      type="email"
+                      class="w-full px-3 py-2 border border-[#e6e4dc] rounded-md focus:outline-none focus:ring-2 focus:ring-[#30a5b8]"
+                      placeholder="Your email"
+                    />
+                  </div>
+                </div>
+                <div class="space-y-2">
+                  <label
+                    htmlFor="subject"
+                    class="text-sm font-medium text-[#1a3e5a]"
+                  >
+                    Subject
+                  </label>
+                  <input
+                    id="subject"
+                    type="text"
+                    class="w-full px-3 py-2 border border-[#e6e4dc] rounded-md focus:outline-none focus:ring-2 focus:ring-[#30a5b8]"
+                    placeholder="Subject"
+                  />
+                </div>
+                <div class="space-y-2">
+                  <label
+                    htmlFor="message"
+                    class="text-sm font-medium text-[#1a3e5a]"
+                  >
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    rows="{5}"
+                    class="w-full px-3 py-2 border border-[#e6e4dc] rounded-md focus:outline-none focus:ring-2 focus:ring-[#30a5b8]"
+                    placeholder="Your message"
+                  ></textarea>
+                </div>
+                <app-button
+                  className="w-full mt-6"
+                  >Send Message</app-button
+                >
+              </form>
+            </app-card-content>
+          </app-card>
+        </div>
+      </div>
+    </section> -->
+  </main>
+
+  <footer class="py-10 bg-[#1a3e5a] text-white">
+    <div class="container">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="col-span-1 md:col-span-2">
+          <div class="flex items-center gap-2 mb-4">
+            <img
+              src="/tch-logo.png"
+              alt="The Code Haven Logo"
+              width="{40}"
+              height="{40}"
+              class="h-10 w-auto bg-white rounded-md p-1"
+            />
+            <span class="text-xl font-semibold">The Code Haven</span>
+          </div>
+          <p class="text-[#cbd5e1] max-w-md">
+            Transforming ideas into digital reality through innovative software
+            solutions and exceptional user experiences.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li>
+              <a
+                href="#services"
+                class="text-[#cbd5e1] hover:text-white transition-colors"
+              >
+                Services
+              </a>
+            </li>
+            <li>
+              <a
+                href="#expertise"
+                class="text-[#cbd5e1] hover:text-white transition-colors"
+              >
+                Expertise
+              </a>
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="text-[#cbd5e1] hover:text-white transition-colors"
+              >
+                About
+              </a>
+            </li>
+            <!-- <li>
+              <a
+                href="#contact"
+                class="text-[#cbd5e1] hover:text-white transition-colors"
+              >
+                Contact
+              </a>
+            </li> -->
+          </ul>
+        </div>
+
+        <div id="contact">
+          <h3 class="text-lg font-semibold mb-4">Contact</h3>
+          <ul class="space-y-2">
+            <li class="flex items-center gap-2">
+              <lucide-icon
+                [img]="Mail"
+                class="h-4 w-4 text-[#30a5b8]"
+              ></lucide-icon>
+              <a
+                href="mailto:contact@thecodehaven.com"
+                class="text-[#cbd5e1] hover:text-white transition-colors"
+              >
+                contact&#64;thecodehaven.com
+              </a>
+            </li>
+            <li class="flex items-center gap-2">
+              <lucide-icon
+                [img]="Phone"
+                class="h-4 w-4 text-[#30a5b8]"
+              ></lucide-icon>
+              <a
+                href="tel:+16476736868"
+                class="text-[#cbd5e1] hover:text-white transition-colors"
+              >
+                +1 647-673-6868
+              </a>
+            </li>
+            <li class="flex items-center gap-2">
+              <lucide-icon
+                [img]="MapPin"
+                class="h-4 w-4 text-[#30a5b8]"
+              ></lucide-icon>
+              <span class="text-[#cbd5e1]">Brampton, Ontario, Canada</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="mt-12 pt-6 border-t border-[#30a5b8]/30 text-center text-[#cbd5e1]"
+      >
+        <p>
+          &copy; {{ copyRightYear }} The Code Haven, Inc. All rights reserved.
+        </p>
+        <a target="_blank" class="italic text-sm" href="https://www.vecteezy.com/free-png/application">Software Development PNGs by Vecteezy</a>
+      </div>
+    </div>
+  </footer>
+</div>

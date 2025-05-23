@@ -1,55 +1,73 @@
-import { Component, signal } from '@angular/core';
+import { Component } from "@angular/core";
+import { ButtonComponent } from "../components/button.component";
+import {
+  CardComponent,
+  CardContentComponent,
+} from "../components/card.component";
+import { CommonModule } from "@angular/common";
+import {
+  LucideAngularModule,
+  Code,
+  Laptop,
+  PenTool,
+  Server,
+  Database,
+  Layers,
+  Mail,
+  MapPin,
+  Phone,
+  House,
+} from "lucide-angular";
 
 @Component({
-  selector: 'app-home',
+  selector: "app-home",
   standalone: true,
-  template: `
-    <div>
-      <a href="https://analogjs.org/" target="_blank">
-        <img alt="Analog Logo" class="logo analog" src="/analog.svg" />
-      </a>
-    </div>
-
-    <h2>Analog</h2>
-
-    <h3>The fullstack meta-framework for Angular!</h3>
-
-    <div class="card">
-      <button type="button" (click)="increment()">Count {{ count() }}</button>
-    </div>
-
-    <p class="read-the-docs">
-      <a href="https://analogjs.org" target="_blank">Docs</a> |
-      <a href="https://github.com/analogjs/analog" target="_blank">GitHub</a> |
-      <a href="https://github.com/sponsors/brandonroberts" target="_blank">
-        Sponsor
-      </a>
-    </p>
-  `,
-  styles: `
-    .logo {
-      will-change: filter;
-    }
-
-    .logo:hover {
-      filter: drop-shadow(0 0 2em #646cffaa);
-    }
-
-    .read-the-docs > * {
-      color: #fff;
-    }
-
-    @media (prefers-color-scheme: light) {
-      .read-the-docs > * {
-        color: #213547;
-      }
-    }
-  `,
+  imports: [
+    CommonModule,
+    ButtonComponent,
+    CardContentComponent,
+    CardComponent,
+    LucideAngularModule,
+  ],
+  templateUrl: "./index.page.html",
 })
 export default class HomeComponent {
-  count = signal(0);
+  readonly Code = Code;
+  readonly Laptop = Laptop;
+  readonly PenTool = PenTool;
+  readonly Server = Server;
+  readonly Database = Database;
+  readonly Layers = Layers;
+  readonly Mail = Mail;
+  readonly MapPin = MapPin;
+  readonly Phone = Phone;
+  readonly House = House;
 
-  increment() {
-    this.count.update((count) => count + 1);
+  readonly expertise = [
+    { name: "Angular", icon: "angular.svg" },
+    { name: "React", icon: "react.svg" },
+    { name: "Vue.js", icon: "vue.svg" },
+    { name: "Next.js", icon: "nextjs.svg" },
+    { name: "Analog", icon: "analog.svg" },
+    { name: "Node.js", icon: "nodejs.svg" },
+    { name: "Nest.js", icon: "nestjs.svg" },
+    { name: "Express.js", icon: "expressjs.svg" },
+    { name: "TypeScript", icon: "typescript.svg" },
+    { name: "JavaScript", icon: "javascript.svg" },
+    { name: "HTML5", icon: "html5.svg" },
+    { name: "CSS3", icon: "css3.svg" },
+    { name: "SASS", icon: "sass.svg" },
+    { name: "Figma", icon: "figma.svg" },
+    { name: "Contentful", icon: "contentful.svg" },
+    { name: "Strapi", icon: "strapi.svg" },
+  ];
+
+  readonly copyRightYear = new Date().getFullYear();
+
+  scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
   }
 }
